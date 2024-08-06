@@ -21,6 +21,7 @@ class HomeScreen extends StatelessWidget {
           floatingActionButton: FloatingActionButton(
             onPressed: () {
               if (state is ProductsLoaded) {
+                
                 final price = (Random().nextDouble() * 100).roundToDouble();
                 final id = Random().nextInt(5000) + 50;
                 context.read<ProductsBloc>().add(AddProduct(
